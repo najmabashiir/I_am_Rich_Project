@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(
-      home: MyApp(),
-      debugShowCheckedModeBanner: false,
-    ),
-  );
+  runApp(MyApp() );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,10 +9,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(home: Scaffold(
       backgroundColor: Colors.blueGrey[200],
       appBar: AppBar(
-        title: const Text(
+        centerTitle: false,
+        title:  Text(
           "Hello Said",
           style: TextStyle(color: Colors.white),
         ),
@@ -25,12 +21,13 @@ class MyApp extends StatelessWidget {
       ),
       body:  Center(
         child: Image(
-          image: AssetImage('images/pizz1.jpg'),
+          image: AssetImage('images/nb.png'),
         ),
       ),
-    );
+    ) );
   }
 }
+
 
 
 
